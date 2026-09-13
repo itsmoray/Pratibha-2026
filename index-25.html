@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pratibha 2026-27 · CVV Arts Fest</title>
+<meta name="description" content="Pratibha 2026-27 - CVV Arts Fest. Rhythm of the Sapta Swaras. Explore events and register.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1B1230;
+  --ink-2:#251A40;
+  --ink-3:#2F2150;
+  --paper:#F6EFE1;
+  --paper-2:#EEE3CB;
+  --paper-line:#DCCFAF;
+  --brass:#C99A3C;
+  --brass-bright:#E0B357;
+  --maroon:#9A4141;
+  --teal:#3E7C6B;
+  --ink-text:#251B38;
+  --muted-on-paper:#71624B;
+  --muted-on-ink:#BDAFD9;
+  --danger:#B24545;
+  --radius-sharp:2px;
+  --radius-soft:14px;
+  --radius-pill:999px;
+  --shadow-card:0 1px 0 rgba(0,0,0,.35), 0 10px 24px -14px rgba(0,0,0,.6);
+  --font-display:'Fraunces', Georgia, serif;
+  --font-body:'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  --maxw:1180px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important}
+}
+body{
+  margin:0;
+  font-family:var(--font-body);
+  background:var(--ink);
+  color:var(--paper);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:var(--font-display); font-weight:600; margin:0; line-height:1.08; letter-spacing:-.01em}
+p{margin:0}
+a{color:inherit}
+button{font-family:inherit}
+::selection{background:var(--brass); color:var(--ink)}
+:focus-visible{outline:2px solid var(--brass-bright); outline-offset:3px}
+
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px}
+@media (max-width:640px){.wrap{padding:0 18px}}
+
+/* ---------- Header ---------- */
+header.site{
+  position:sticky; top:0; z-index:40;
+  background:rgba(27,18,48,.86);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(201,154,60,.22);
+}
+.nav{display:flex; align-items:center; justify-content:space-between; padding:16px 0}
+.brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+.brand .mark{width:30px; height:30px; flex:none}
+.brand .word{font-family:var(--font-display); font-size:19px; font-weight:600; letter-spacing:.01em}
+.brand .word em{font-style:italic; color:var(--brass-bright); font-weight:500}
+.navlinks{display:flex; align-items:center; gap:28px}
+.navlinks a{text-decoration:none; font-size:14.5px; font-weight:600; color:var(--muted-on-ink); transition:color .2s}
+.navlinks a:hover{color:var(--paper)}
+.navlinks .cta{
+  background:var(--brass); color:var(--ink); padding:9px 18px; border-radius:var(--radius-pill);
+  font-weight:700;
+}
+.navlinks .cta:hover{background:var(--brass-bright)}
+.navToggle{display:none; background:none; border:none; color:var(--paper); cursor:pointer; padding:6px}
+@media (max-width:760px){
+  .navlinks{position:fixed; inset:64px 0 auto 0; background:var(--ink-2); flex-direction:column; align-items:stretch; gap:0; padding:8px 20px 20px; border-bottom:1px solid rgba(201,154,60,.22); transform:translateY(-8px); opacity:0; pointer-events:none; transition:all .22s ease}
+  .navlinks.open{transform:translateY(0); opacity:1; pointer-events:auto}
+  .navlinks a{padding:14px 4px; border-bottom:1px solid rgba(255,255,255,.06)}
+  .navlinks .cta{margin-top:12px; text-align:center}
+  .navToggle{display:block}
+}
+
+/* ---------- Hero ---------- */
+.hero{padding:64px 0 40px; position:relative}
+.hero-grid{display:grid; grid-template-columns:1.15fr .85fr; gap:40px; align-items:center}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr; gap:36px}}
+.eyebrow-note{display:inline-flex; align-items:center; gap:8px; font-size:13.5px; color:var(--brass-bright); font-weight:700; margin-bottom:18px}
+.eyebrow-note svg{width:16px;height:16px}
+.hero h1{font-size:clamp(38px,6vw,64px); color:var(--paper)}
+.hero h1 .accent{font-style:italic; font-weight:500; color:var(--brass-bright)}
+.hero p.lede{margin-top:18px; font-size:17.5px; line-height:1.6; color:var(--muted-on-ink); max-width:46ch}
+.hero-meta{display:flex; flex-wrap:wrap; gap:22px; margin-top:24px}
+.hero-meta div{font-size:13.5px; color:var(--muted-on-ink)}
+.hero-meta strong{display:block; color:var(--paper); font-family:var(--font-display); font-size:17px; font-weight:600}
+.hero-actions{display:flex; flex-wrap:wrap; gap:14px; margin-top:30px}
+.btn{
+  border:none; cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; gap:8px;
+  padding:13px 24px; border-radius:var(--radius-pill); font-weight:700; font-size:14.5px; transition:transform .15s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
+}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--brass); color:var(--ink)}
+.btn-primary:hover{background:var(--brass-bright)}
+.btn-outline{background:transparent; color:var(--paper); border:1.5px solid rgba(246,239,225,.35)}
+.btn-outline:hover{border-color:var(--brass-bright); color:var(--brass-bright)}
+.btn-block{width:100%; justify-content:center}
+.btn[disabled]{opacity:.5; cursor:not-allowed}
+
+.staff-wrap{position:relative}
+.staff-wrap svg{width:100%; height:auto}
+.swara-dot{transform-origin:center}
+.swara-label{font-family:var(--font-body); font-weight:700; font-size:11px; fill:var(--muted-on-ink)}
+
+/* ---------- Ticker ---------- */
+.ticker{
+  border-top:1px solid rgba(201,154,60,.22); border-bottom:1px solid rgba(201,154,60,.22);
+  padding:22px 0; margin-top:40px;
+}
+.ticker .wrap{display:flex; flex-wrap:wrap; gap:32px; justify-content:space-between; align-items:center}
+.ticker-stat{display:flex; align-items:baseline; gap:8px}
+.ticker-stat .num{font-family:var(--font-display); font-size:26px; font-weight:700; color:var(--brass-bright)}
+.ticker-stat .lbl{font-size:13px; color:var(--muted-on-ink)}
+.ticker-note{font-size:12.5px; color:var(--muted-on-ink); font-style:italic}
+
+/* ---------- Section shell ---------- */
+section{padding:76px 0}
+.section-head{display:flex; justify-content:space-between; align-items:flex-end; gap:24px; margin-bottom:36px; flex-wrap:wrap}
+.section-head h2{font-size:clamp(28px,4vw,40px); color:var(--paper)}
+.section-head p{color:var(--muted-on-ink); max-width:52ch; margin-top:10px; line-height:1.6}
+.on-paper{background:var(--paper); color:var(--ink-text)}
+.on-paper .section-head h2{color:var(--ink-text)}
+.on-paper .section-head p{color:var(--muted-on-paper)}
+
+/* ---------- Staff divider (7-node motif) ---------- */
+.staff-divider{display:flex; align-items:center; gap:6px; margin:6px 0 34px}
+.staff-divider .line{flex:1; height:1px; background:linear-gradient(90deg, transparent, rgba(201,154,60,.5), transparent)}
+.staff-divider .node{width:6px; height:6px; border-radius:50%; background:var(--brass)}
+
+/* ---------- Events explorer ---------- */
+.explorer-controls{display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-bottom:8px}
+.search-box{
+  flex:1 1 280px; display:flex; align-items:center; gap:10px; background:var(--ink-2); border:1px solid rgba(201,154,60,.25);
+  border-radius:var(--radius-pill); padding:11px 18px;
+}
+.search-box svg{width:17px; height:17px; color:var(--muted-on-ink); flex:none}
+.search-box input{background:none; border:none; outline:none; color:var(--paper); font-size:14.5px; width:100%}
+.search-box input::placeholder{color:var(--muted-on-ink)}
+.chip-row{display:flex; flex-wrap:wrap; gap:9px; margin:18px 0 30px}
+.chip{
+  border:1px solid rgba(201,154,60,.3); background:transparent; color:var(--muted-on-ink); padding:8px 15px;
+  border-radius:var(--radius-pill); font-size:13px; font-weight:600; cursor:pointer; transition:all .18s;
+}
+.chip:hover{border-color:var(--brass-bright); color:var(--paper)}
+.chip.active{background:var(--brass); color:var(--ink); border-color:var(--brass)}
+
+.event-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px}
+.event-card{
+  background:var(--ink-2); border:1px solid rgba(201,154,60,.18); border-radius:var(--radius-soft);
+  padding:20px 20px 18px; cursor:pointer; transition:border-color .2s, transform .2s;
+}
+.event-card:hover{border-color:rgba(201,154,60,.5)}
+.event-card .row-top{display:flex; justify-content:space-between; align-items:flex-start; gap:10px}
+.event-code{font-size:11.5px; font-weight:700; color:var(--brass-bright); letter-spacing:.02em}
+.count-badge{
+  font-size:12px; font-weight:700; background:rgba(62,124,107,.18); color:#7FC7B0; padding:4px 10px; border-radius:var(--radius-pill);
+  white-space:nowrap; flex:none;
+}
+.event-card h3{font-size:19px; margin-top:8px; color:var(--paper); font-weight:600}
+.event-tags{display:flex; flex-wrap:wrap; gap:6px; margin-top:10px}
+.tag{font-size:11px; font-weight:700; padding:3px 9px; border-radius:var(--radius-pill); background:rgba(246,239,225,.08); color:var(--muted-on-ink)}
+.event-card .meta-line{margin-top:12px; font-size:13px; color:var(--muted-on-ink)}
+.event-card .rules{
+  margin-top:14px; padding-top:14px; border-top:1px dashed rgba(201,154,60,.25); display:none; font-size:13.5px; line-height:1.6; color:var(--muted-on-ink);
+}
+.event-card .rules ul{margin:0; padding-left:18px}
+.event-card .rules li{margin-bottom:5px}
+.event-card.open .rules{display:block}
+.event-card .expand-hint{margin-top:12px; font-size:12px; font-weight:700; color:var(--brass-bright)}
+.no-results{color:var(--muted-on-ink); padding:40px 0; text-align:center; font-size:15px}
+
+/* ---------- Register section ---------- */
+.reg-shell{
+  background:var(--paper); color:var(--ink-text); border-radius:var(--radius-soft); overflow:hidden;
+  box-shadow:var(--shadow-card);
+}
+.reg-progress{display:flex; background:var(--paper-2); padding:18px 26px; gap:6px; overflow-x:auto}
+.reg-progress .step{
+  display:flex; align-items:center; gap:8px; font-size:12.5px; font-weight:700; color:var(--muted-on-paper); white-space:nowrap; padding:6px 4px;
+}
+.reg-progress .step .dot{width:20px; height:20px; border-radius:50%; border:1.5px solid var(--muted-on-paper); display:flex; align-items:center; justify-content:center; font-size:10.5px}
+.reg-progress .step.active{color:var(--maroon)}
+.reg-progress .step.active .dot{background:var(--maroon); border-color:var(--maroon); color:var(--paper)}
+.reg-progress .step.done .dot{background:var(--teal); border-color:var(--teal); color:var(--paper)}
+.reg-progress .connector{flex:1; height:1px; background:var(--paper-line); align-self:center; min-width:14px}
+
+.reg-body{padding:36px}
+@media (max-width:640px){.reg-body{padding:24px 18px}}
+.fieldset-title{font-family:var(--font-display); font-size:22px; font-weight:600; margin-bottom:6px}
+.fieldset-sub{color:var(--muted-on-paper); font-size:14px; margin-bottom:26px}
+.form-row{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:18px}
+@media (max-width:640px){.form-row{grid-template-columns:1fr}}
+.field label{display:block; font-size:13px; font-weight:700; margin-bottom:7px; color:var(--ink-text)}
+.field .hint{font-size:12px; color:var(--muted-on-paper); margin-top:6px}
+.field input[type=text],.field input[type=email],.field input[type=tel],.field select,.field textarea{
+  width:100%; padding:12px 14px; border-radius:var(--radius-sharp); border:1.5px solid var(--paper-line); background:#fff;
+  font-family:var(--font-body); font-size:14.5px; color:var(--ink-text); transition:border-color .18s;
+}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--maroon); outline:none}
+.field.invalid input,.field.invalid select{border-color:var(--danger)}
+.field .err{color:var(--danger); font-size:12px; margin-top:6px; display:none; font-weight:600}
+.field.invalid .err{display:block}
+.radio-grid,.check-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:10px}
+.opt-card{
+  border:1.5px solid var(--paper-line); border-radius:var(--radius-sharp); padding:11px 13px; display:flex; align-items:center; gap:10px;
+  cursor:pointer; font-size:13.5px; background:#fff; transition:border-color .15s, background .15s;
+}
+.opt-card:hover{border-color:var(--brass)}
+.opt-card input{accent-color:var(--maroon); width:16px; height:16px; flex:none}
+.opt-card.checked{border-color:var(--maroon); background:#FBF2E9}
+.limit-note{font-size:12px; color:var(--muted-on-paper); margin-top:8px}
+.group-block{border:1.5px dashed var(--paper-line); border-radius:var(--radius-sharp); padding:16px; margin-top:16px; display:none}
+.group-block.show{display:block}
+.event-picker-block{margin-bottom:26px; padding-bottom:26px; border-bottom:1px solid var(--paper-line)}
+.event-picker-block:last-child{border-bottom:none}
+.event-picker-block h4{font-size:15px; font-weight:700; margin-bottom:4px}
+.event-picker-block .desc{font-size:13px; color:var(--muted-on-paper); margin-bottom:12px}
+
+.selection-summary{background:#fff; border:1.5px solid var(--paper-line); border-radius:var(--radius-sharp); padding:16px; margin-top:8px}
+.selection-summary .count-line{display:flex; justify-content:space-between; align-items:center; font-size:13.5px; font-weight:700; margin-bottom:10px}
+.selection-summary .count-line .n{color:var(--maroon)}
+.selection-summary ul{margin:0; padding-left:18px; font-size:13.5px; line-height:1.8}
+.selection-summary .warn{margin-top:10px; font-size:12.5px; color:var(--danger); font-weight:700; display:none}
+.selection-summary.over .warn{display:block}
+
+.reg-nav{display:flex; justify-content:space-between; align-items:center; margin-top:30px; gap:14px}
+.reg-nav .spacer{flex:1}
+
+.consent-line{display:flex; align-items:flex-start; gap:10px; font-size:13px; color:var(--muted-on-paper); margin-top:22px}
+.consent-line input{margin-top:3px; accent-color:var(--maroon)}
+
+/* ---------- Toast / Modal ---------- */
+.overlay{
+  position:fixed; inset:0; background:rgba(27,18,48,.7); backdrop-filter:blur(4px); display:flex; align-items:center; justify-content:center;
+  z-index:100; opacity:0; pointer-events:none; transition:opacity .22s ease; padding:20px;
+}
+.overlay.show{opacity:1; pointer-events:auto}
+.modal{
+  background:var(--paper); color:var(--ink-text); border-radius:var(--radius-soft); max-width:440px; width:100%; padding:32px;
+  transform:translateY(14px) scale(.98); transition:transform .28s cubic-bezier(.2,.9,.25,1.1); box-shadow:0 30px 60px -20px rgba(0,0,0,.6);
+  max-height:88vh; overflow:auto;
+}
+.overlay.show .modal{transform:translateY(0) scale(1)}
+.modal.wide{max-width:900px}
+.modal-close{position:absolute; top:18px; right:18px}
+.success-icon{width:56px; height:56px; border-radius:50%; background:var(--teal); display:flex; align-items:center; justify-content:center; margin-bottom:18px}
+.success-icon svg{width:28px; height:28px; stroke:var(--paper)}
+.modal h3{font-size:24px; margin-bottom:10px}
+.modal p{color:var(--muted-on-paper); line-height:1.6; font-size:14.5px}
+.confetti-piece{position:fixed; top:-10px; z-index:120; pointer-events:none; border-radius:2px}
+
+/* ---------- Admin ---------- */
+.admin-trigger{opacity:.28; font-size:11px; cursor:default; user-select:none; letter-spacing:.03em}
+.admin-login .field{margin-bottom:16px}
+.admin-dash{display:flex; flex-direction:column; gap:20px}
+.admin-topbar{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px}
+.admin-stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px}
+.admin-stat{background:#fff; border:1.5px solid var(--paper-line); border-radius:var(--radius-sharp); padding:14px}
+.admin-stat .n{font-family:var(--font-display); font-size:26px; font-weight:700; color:var(--maroon)}
+.admin-stat .l{font-size:12px; color:var(--muted-on-paper); font-weight:600}
+.status-pill{display:inline-flex; align-items:center; gap:7px; font-size:12.5px; font-weight:700; padding:7px 14px; border-radius:var(--radius-pill)}
+.status-pill.open{background:rgba(62,124,107,.15); color:var(--teal)}
+.status-pill.closed{background:rgba(178,69,69,.15); color:var(--danger)}
+.admin-table-wrap{max-height:360px; overflow:auto; border:1.5px solid var(--paper-line); border-radius:var(--radius-sharp)}
+table.admin-table{width:100%; border-collapse:collapse; font-size:12.5px}
+table.admin-table th{position:sticky; top:0; background:var(--paper-2); text-align:left; padding:9px 12px; font-weight:700; white-space:nowrap}
+table.admin-table td{padding:9px 12px; border-top:1px solid var(--paper-line); white-space:nowrap}
+.btn-sm{padding:8px 14px; font-size:12.5px; border-radius:var(--radius-pill); border:1.5px solid var(--paper-line); background:#fff; cursor:pointer; font-weight:700; color:var(--ink-text)}
+.btn-sm:hover{border-color:var(--maroon)}
+.btn-sm.danger{color:var(--danger); border-color:rgba(178,69,69,.4)}
+.spin{width:16px; height:16px; border-radius:50%; border:2px solid rgba(0,0,0,.15); border-top-color:var(--maroon); animation:spin .7s linear infinite; display:inline-block}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ---------- Footer ---------- */
+footer{padding:50px 0 30px; border-top:1px solid rgba(201,154,60,.2)}
+footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px; align-items:center}
+footer .fmark{font-family:var(--font-display); font-size:15px; color:var(--muted-on-ink)}
+footer .fmeta{font-size:12.5px; color:var(--muted-on-ink)}
+
+.sr-only{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="#top" class="brand">
+      <svg class="mark" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="#C99A3C" stroke-width="1.4"/><path d="M8 20c2-6 4-9 8-9s6 3 8 9" stroke="#E0B357" stroke-width="1.4" fill="none"/><circle cx="8" cy="20" r="1.6" fill="#E0B357"/><circle cx="16" cy="11" r="1.6" fill="#E0B357"/><circle cx="24" cy="20" r="1.6" fill="#E0B357"/></svg>
+      <span class="word">PRATIBHA <em>2026–27</em></span>
+    </a>
+    <button class="navToggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <nav class="navlinks" id="navLinks">
+      <a href="#events">Events</a>
+      <a href="#houses">Houses</a>
+      <a href="#rules">Rules</a>
+      <a href="#register" class="cta">Register now</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          CVV Arts Fest · Theme: Rhythm of Sapta Swaras
+        </span>
+        <h1>Seven houses.<br>One <span class="accent">rhythm</span>.<br>Your stage.</h1>
+        <p class="lede">Pratibha 2026&ndash;27 brings forty-nine events across music, dance, literature, theatre and fine art. Find your event, read the rules, and register in a few minutes.</p>
+        <div class="hero-meta">
+          <div><strong>28&ndash;29 Sep</strong>Off-stage events</div>
+          <div><strong>30 Sep &ndash; 1 Oct</strong>On-stage events</div>
+          <div><strong>49</strong>Competitive events</div>
+          <div><strong>7</strong>Houses / swaras</div>
+        </div>
+        <div class="hero-actions">
+          <a href="#events" class="btn btn-primary">Explore events</a>
+          <a href="#register" class="btn btn-outline">Register now</a>
+        </div>
+      </div>
+      <div class="staff-wrap" aria-hidden="true">
+        <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 130 C 90 40, 150 220, 230 130 S 370 40, 410 130" fill="none" stroke="#C99A3C" stroke-width="1.2" opacity=".55"/>
+          <g id="swaraNodes"></g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TICKER ============ -->
+  <div class="ticker">
+    <div class="wrap">
+      <div class="ticker-stat"><span class="num" id="tkTotal">&mdash;</span><span class="lbl">total registrations</span></div>
+      <div class="ticker-stat"><span class="num" id="tkEvents">49</span><span class="lbl">events open</span></div>
+      <div class="ticker-stat"><span class="num" id="tkHouses">7</span><span class="lbl">houses competing</span></div>
+      <span class="ticker-note">Counts update automatically &mdash; only totals are shown, never personal details.</span>
+    </div>
+  </div>
+
+  <!-- ============ EVENTS ============ -->
+  <section id="events">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>Find your event</h2>
+          <p>Search by name or code, or filter by category and stage. Tap a card to read the full rules and see how many students have registered so far.</p>
+        </div>
+      </div>
+
+      <div class="explorer-controls">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <input type="text" id="searchInput" placeholder="Search events e.g. &ldquo;classical dance&rdquo; or &ldquo;PAF12&rdquo;">
+        </div>
+      </div>
+      <div class="chip-row" id="categoryChips"></div>
+      <div class="chip-row" id="stageChips"></div>
+
+      <div class="event-grid" id="eventGrid"></div>
+      <p class="no-results" id="noResults" style="display:none">No events match that search. Try a different word or clear the filters.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOUSES ============ -->
+  <section id="houses" class="on-paper">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>The seven houses</h2>
+          <p>Every student belongs to a house drawn from their programme. Points from your events add to your house's tally across the fest.</p>
+        </div>
+      </div>
+      <div class="event-grid" id="houseGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ RULES ============ -->
+  <section id="rules">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>Before you register</h2>
+          <p>The essentials from the official guidelines &mdash; read the full rules for your specific event on its card above.</p>
+        </div>
+      </div>
+      <div class="event-grid">
+        <div class="event-card" style="cursor:default">
+          <h3>Five events, your choice of split</h3>
+          <p class="meta-line">Pick either 3 off-stage + 2 on-stage, or 2 off-stage + 3 on-stage. Short film doesn't count toward this limit.</p>
+        </div>
+        <div class="event-card" style="cursor:default">
+          <h3>No spot entries</h3>
+          <p class="meta-line">Individual and group events must be registered in advance. Late registrations are not accepted on the day.</p>
+        </div>
+        <div class="event-card" style="cursor:default">
+          <h3>Two on-stage group events max</h3>
+          <p class="meta-line">You can lead or join at most two on-stage group events, and each house may field only two teams per group event.</p>
+        </div>
+        <div class="event-card" style="cursor:default">
+          <h3>Only the team leader registers</h3>
+          <p class="meta-line">For group events, one person registers for the whole team and lists everyone's name and batch. Multiple entries for the same team cause disqualification.</p>
+        </div>
+        <div class="event-card" style="cursor:default">
+          <h3>Consult your house coordinator</h3>
+          <p class="meta-line">Every event except off-stage literary events should be registered only after checking with your house faculty or student coordinator.</p>
+        </div>
+        <div class="event-card" style="cursor:default">
+          <h3>College email only</h3>
+          <p class="meta-line">Registration is open only to students with an official CVV email address ending in @cvv.ac.in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REGISTER ============ -->
+  <section id="register">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>Register for Pratibha</h2>
+          <p>Five short steps. You can go back and change anything before you submit.</p>
+        </div>
+      </div>
+
+      <div class="reg-shell">
+        <div class="reg-progress" id="regProgress"></div>
+        <div class="reg-body">
+          <form id="regForm" novalidate>
+
+            <!-- STEP 1 -->
+            <div class="reg-step" data-step="1">
+              <div class="fieldset-title">Your details</div>
+              <div class="fieldset-sub">Use your official CVV email &mdash; it's how we verify you're a registered student.</div>
+
+              <div class="form-row">
+                <div class="field" id="f-email">
+                  <label for="email">College email</label>
+                  <input type="email" id="email" placeholder="yourname.cvv2xxxxx@cvv.ac.in" autocomplete="email">
+                  <div class="hint">Must end with @cvv.ac.in</div>
+                  <div class="err">Please use your official @cvv.ac.in email address.</div>
+                </div>
+                <div class="field" id="f-name">
+                  <label for="fullName">Full name</label>
+                  <input type="text" id="fullName" placeholder="As per college records" autocomplete="name">
+                  <div class="err">Please enter your full name.</div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="field" id="f-regno">
+                  <label for="regNo">Official registration number</label>
+                  <input type="text" id="regNo" placeholder="e.g. 241190015">
+                  <div class="err">Please enter your registration number.</div>
+                </div>
+                <div class="field" id="f-gender">
+                  <label for="gender">Gender</label>
+                  <select id="gender">
+                    <option value="">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select>
+                  <div class="err">Please select a gender.</div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="field" id="f-whatsapp">
+                  <label for="whatsapp">WhatsApp number</label>
+                  <input type="tel" id="whatsapp" placeholder="10-digit number" autocomplete="tel">
+                  <div class="err">Please enter a valid 10-digit WhatsApp number.</div>
+                </div>
+                <div class="field" id="f-batch">
+                  <label for="batch">Batch</label>
+                  <input type="text" id="batch" placeholder="e.g. BCA 1 - S3">
+                  <div class="err">Please enter your batch.</div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="field" id="f-programme">
+                  <label for="programme">Programme</label>
+                  <select id="programme"></select>
+                  <div class="err">Please select your programme.</div>
+                </div>
+                <div class="field" id="f-campus">
+                  <label for="campus">Campus / facility</label>
+                  <select id="campus">
+                    <option value="">Select</option>
+                    <option value="PP - Warriam Road Facility">PP &ndash; Warriam Road Facility</option>
+                    <option value="LP - Onakkoor Facility">LP &ndash; Onakkoor Facility</option>
+                  </select>
+                  <div class="err">Please select your campus.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="reg-step" data-step="2" style="display:none">
+              <div class="fieldset-title">Your house</div>
+              <div class="fieldset-sub">Chosen automatically from your programme &mdash; adjust it if it doesn't look right.</div>
+              <div class="field" id="f-house">
+                <label for="house">Group / house</label>
+                <select id="house"></select>
+                <div class="err">Please select your house.</div>
+              </div>
+              <div id="houseInfoCard" style="margin-top:16px"></div>
+            </div>
+
+            <!-- STEP 3: OFF-STAGE -->
+            <div class="reg-step" data-step="3" style="display:none">
+              <div class="fieldset-title">Off-stage events</div>
+              <div class="fieldset-sub">28&ndash;29 September. Choose one language per writing event, or mark it not interested.</div>
+
+              <div class="event-picker-block">
+                <h4>Poetry writing</h4>
+                <div class="desc">Original composition, written during the hour. Pick a language or skip.</div>
+                <div class="radio-grid" data-group="poetry"></div>
+              </div>
+              <div class="event-picker-block">
+                <h4>Short story writing</h4>
+                <div class="desc">Original fiction, 600&ndash;800 words. Pick a language or skip.</div>
+                <div class="radio-grid" data-group="story"></div>
+              </div>
+              <div class="event-picker-block">
+                <h4>Essay writing</h4>
+                <div class="desc">800&ndash;1000 words on a topic given at the start. Pick a language or skip.</div>
+                <div class="radio-grid" data-group="essay"></div>
+              </div>
+              <div class="event-picker-block">
+                <h4>Fine arts event</h4>
+                <div class="desc">One fine-arts event only &mdash; water colouring, pencil drawing, clay modelling, rangoli, mehendi, collage or photography.</div>
+                <div class="radio-grid" data-group="fineart"></div>
+              </div>
+              <div class="event-picker-block">
+                <h4>Short film</h4>
+                <div class="desc">Under 2 minutes, theme &ldquo;The Rhythm of Sapta Swaras&rdquo;. Only the director registers. Doesn't count toward your 5-event limit. Submission deadline: 28 September, 5:00 PM.</div>
+                <div class="radio-grid" data-group="shortfilm"></div>
+              </div>
+            </div>
+
+            <!-- STEP 4: ON-STAGE -->
+            <div class="reg-step" data-step="4" style="display:none">
+              <div class="fieldset-title">On-stage events</div>
+              <div class="fieldset-sub">30 September &ndash; 1 October. Choose as many as apply &mdash; your 5-event limit still applies.</div>
+
+              <div class="event-picker-block">
+                <h4>Elocution</h4>
+                <div class="desc">Pick one or more languages. Topic given 15 minutes before your turn.</div>
+                <div class="check-grid" data-group="elocution"></div>
+              </div>
+              <div class="event-picker-block">
+                <h4>Recitation</h4>
+                <div class="desc">Published work recited from memory. Pick one or more languages.</div>
+                <div class="check-grid" data-group="recitation"></div>
+              </div>
+              <div class="event-picker-block">
+                <h4>Geetha chanting</h4>
+                <div class="desc">Verses from the Bhagavad Gita, chanted from memory.</div>
+                <div class="radio-grid" data-group="geetha"></div>
+              </div>
+              <div class="event-picker-block">
+                <h4>Individual events</h4>
+                <div class="desc">Mono act, mimicry, fancy dress, vocal, instrumental and dance solos.</div>
+                <div class="check-grid" data-group="individual"></div>
+              </div>
+              <div class="event-picker-block">
+                <h4>Group events</h4>
+                <div class="desc">Debate, mime, group songs and group dances. Only the team leader registers.</div>
+                <div class="check-grid" data-group="groupevents"></div>
+                <div class="group-block" id="groupMembersBlock">
+                  <label for="groupMembers" style="display:block; font-size:13px; font-weight:700; margin-bottom:7px">Group members &mdash; names &amp; batches</label>
+                  <textarea id="groupMembers" rows="4" placeholder="List the event, then each member's name and batch, one per line."></textarea>
+                  <div class="hint">Required because you selected at least one group event.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 5: REVIEW -->
+            <div class="reg-step" data-step="5" style="display:none">
+              <div class="fieldset-title">Review &amp; submit</div>
+              <div class="fieldset-sub">Check your selections below. Extra events beyond the limit of five may be cancelled without notice, so it's worth trimming the list yourself.</div>
+              <div id="reviewDetails" style="font-size:14px; line-height:1.9"></div>
+              <div class="selection-summary" id="selSummary">
+                <div class="count-line"><span>Events selected (of 5 max)</span><span class="n"><span id="selCount">0</span> / 5</span></div>
+                <ul id="selList"></ul>
+                <div class="warn">You've selected more than five events. Please remove some before submitting &mdash; extras may be dropped automatically.</div>
+              </div>
+              <label class="consent-line">
+                <input type="checkbox" id="consentCheck">
+                <span>I confirm the details above are accurate and I've consulted my house coordinator where required.</span>
+              </label>
+            </div>
+
+            <div class="reg-nav">
+              <button type="button" class="btn btn-outline" id="btnBack" style="visibility:hidden">Back</button>
+              <span class="spacer"></span>
+              <button type="button" class="btn btn-primary" id="btnNext">Continue</button>
+              <button type="submit" class="btn btn-primary" id="btnSubmit" style="display:none">Submit registration</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fmark">Pratibha 2026&ndash;27 &middot; CVV Arts Fest</div>
+    <div class="fmeta">Built for students, by students. Questions go to your class representative. <span class="admin-trigger" id="adminTrigger">&middot;</span></div>
+  </div>
+</footer>
+
+<!-- ============ SUCCESS MODAL ============ -->
+<div class="overlay" id="successOverlay">
+  <div class="modal">
+    <div class="success-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+    <h3>You're registered</h3>
+    <p id="successMsg">Your entry has been recorded. Watch for updates from your house coordinator about reporting time and venue.</p>
+    <button class="btn btn-primary" style="margin-top:20px" id="successClose">Done</button>
+  </div>
+</div>
+
+<!-- ============ ERROR MODAL ============ -->
+<div class="overlay" id="errorOverlay">
+  <div class="modal">
+    <h3 style="color:#9A4141">Couldn't submit that</h3>
+    <p id="errorMsg">Something went wrong. Please try again.</p>
+    <button class="btn btn-outline" style="margin-top:20px" id="errorClose">Close</button>
+  </div>
+</div>
+
+<!-- ============ ADMIN LOGIN MODAL ============ -->
+<div class="overlay" id="adminLoginOverlay">
+  <div class="modal admin-login">
+    <h3>Developer sign-in</h3>
+    <p style="margin-bottom:18px">This area is for the fest committee only.</p>
+    <div class="field" id="f-adminpass">
+      <label for="adminPass">Password</label>
+      <input type="password" id="adminPass" autocomplete="current-password">
+      <div class="err">Incorrect password.</div>
+    </div>
+    <div style="display:flex; gap:10px; margin-top:8px">
+      <button class="btn btn-outline" id="adminLoginCancel" style="flex:1">Cancel</button>
+      <button class="btn btn-primary" id="adminLoginSubmit" style="flex:1">Sign in</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ADMIN DASHBOARD MODAL ============ -->
+<div class="overlay" id="adminDashOverlay">
+  <div class="modal wide">
+    <div class="admin-dash">
+      <div class="admin-topbar">
+        <h3 style="margin:0">Committee dashboard</h3>
+        <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap">
+          <span class="status-pill" id="regStatusPill">&mdash;</span>
+          <button class="btn-sm" id="toggleRegBtn">Toggle registration</button>
+          <button class="btn-sm" id="refreshAdminBtn">Refresh</button>
+          <button class="btn-sm" id="exportCsvBtn">Export CSV</button>
+          <button class="btn-sm danger" id="adminLogoutBtn">Sign out</button>
+        </div>
+      </div>
+      <div class="admin-stats" id="adminStats"></div>
+      <div class="admin-table-wrap">
+        <table class="admin-table" id="adminTable">
+          <thead><tr><th>Loading&hellip;</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* =========================================================================
+   PRATIBHA 2026-27 — front end
+   Wire APPS_SCRIPT_URL to your deployed Google Apps Script web app.
+   See SETUP.md for how to create and deploy it.
+   ========================================================================= */
+const APPS_SCRIPT_URL = "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
+const COLLEGE_EMAIL_DOMAIN = "@cvv.ac.in";
+
+/* ---------------- Event catalogue ---------------- */
+// stage: 'on' | 'off'   type: 'individual' | 'group'
+const EVENTS = [
+  {code:'PAF01', name:'Light Music Vocal (Indian)', cat:'Musical', stage:'on', type:'individual', duration:'Solo · 5 min', perHouse:'2 per house', rules:['Any Indian language, film songs not allowed','Classical/semi-classical not considered','No karaoke']},
+  {code:'PAF02', name:'Classical Music Vocal', cat:'Musical', stage:'on', type:'individual', duration:'Solo · 10 min', perHouse:'2 per house', rules:['Hindustani or Carnatic style','Cinema songs not allowed','Choose your raga and composition carefully']},
+  {code:'PAF03', name:'Western Vocal', cat:'Musical', stage:'on', type:'individual', duration:'Solo · 5 min', perHouse:'2 per house', rules:['Song must be in English','Pre-recorded instrumental track allowed, no vocals on track','Submit track as MP3 beforehand']},
+  {code:'PAF04', name:'Group Song (Indian)', cat:'Musical', stage:'on', type:'group', duration:'10 min · 6-8 members', perHouse:'2 teams per house', rules:['Two songs, one must be patriotic','Any Indian language, no film songs','2-3 non-singer instruments allowed, plus singers on instruments']},
+  {code:'PAF05', name:'Group Song (Western)', cat:'Musical', stage:'on', type:'group', duration:'10 min · 6-8 members', perHouse:'2 teams per house', rules:['English, any Western genre','Acapella or up to 3 instruments, no pre-recorded tracks','Judged on singing quality, not makeup']},
+  {code:'PAF06', name:'Stringed Instrument (Eastern)', cat:'Musical', stage:'on', type:'individual', duration:'10 min', perHouse:'2 per house', rules:['Bring your own manual instrument','Perform with sruti','Western instruments adapted to Indian raga allowed']},
+  {code:'PAF07', name:'Stringed Instrument (Western)', cat:'Musical', stage:'on', type:'individual', duration:'10 min', perHouse:'2 per house', rules:['Bring your own manual instrument']},
+  {code:'PAF08', name:'Wind Instrument (Eastern)', cat:'Musical', stage:'on', type:'individual', duration:'10 min', perHouse:'2 per house', rules:['Harmonium, flute, nadhaswaram etc.','Bring your own manual instrument']},
+  {code:'PAF09', name:'Wind Instrument (Western)', cat:'Musical', stage:'on', type:'individual', duration:'10 min', perHouse:'2 per house', rules:['Harmonium, accordion, clarinet, saxophone etc.','Electronic keyboards don\u2019t count as wind instruments']},
+  {code:'PAF10', name:'Percussion Instrument (Eastern)', cat:'Musical', stage:'on', type:'individual', duration:'10 min', perHouse:'2 per house', rules:['Carnatic or Hindustani style','Bring your own instrument']},
+  {code:'PAF11', name:'Percussion Instrument (Western)', cat:'Musical', stage:'on', type:'individual', duration:'10 min', perHouse:'2 per house', rules:['Western style','Bring your own instrument']},
+  {code:'PAF12', name:'Classical Dance', cat:'Dance', stage:'on', type:'individual', duration:'Solo · 10 min', perHouse:'2 per house', rules:['Any classical Indian genre','Judged on talam, abhinayam, footwork','Share your song with the sound team at registration']},
+  {code:'PAF13', name:'Western Dance', cat:'Dance', stage:'on', type:'individual', duration:'Solo · 5 min', perHouse:'2 per house', rules:['Authentic costume and style, no extra marks for costume']},
+  {code:'PAF14', name:'Folk Dance', cat:'Dance', stage:'on', type:'group', duration:'8 min · 6-8 members', perHouse:'2 teams per house', rules:['Authentic folk dance, any Indian region','Folk music only, no classical form','You\u2019re responsible for clearing your own props']},
+  {code:'PAF15', name:'Group Dance', cat:'Dance', stage:'on', type:'group', duration:'8 min · 6-8 members', perHouse:'2 teams per house', rules:['Classical, semi-classical, western or contemporary','Coordinated formations and expressions','Share your song with the sound team at registration']},
+  {code:'PAF16', name:'Elocution (Malayalam)', cat:'Literary', stage:'on', type:'individual', duration:'5 min', perHouse:'3 per house', rules:['Topic given 15 min before your turn','No books, phones or written scripts once topic is out']},
+  {code:'PAF17', name:'Elocution (English)', cat:'Literary', stage:'on', type:'individual', duration:'5 min', perHouse:'3 per house', rules:['Topic given 15 min before your turn','No books, phones or written scripts once topic is out']},
+  {code:'PAF18', name:'Elocution (Hindi)', cat:'Literary', stage:'on', type:'individual', duration:'5 min', perHouse:'3 per house', rules:['Topic given 15 min before your turn','No books, phones or written scripts once topic is out']},
+  {code:'PAF19', name:'Elocution (Sanskrit)', cat:'Literary', stage:'on', type:'individual', duration:'5 min', perHouse:'3 per house', rules:['Topic given 15 min before your turn','No books, phones or written scripts once topic is out']},
+  {code:'PAF20', name:'Essay Writing (Malayalam)', cat:'Literary', stage:'off', type:'individual', duration:'1 hour', perHouse:'No restriction', rules:['800-1000 words, handwritten on provided sheets','Blue/black pen only, no reference material']},
+  {code:'PAF21', name:'Essay Writing (English)', cat:'Literary', stage:'off', type:'individual', duration:'1 hour', perHouse:'No restriction', rules:['800-1000 words, handwritten on provided sheets','Blue/black pen only, no reference material']},
+  {code:'PAF22', name:'Essay Writing (Hindi)', cat:'Literary', stage:'off', type:'individual', duration:'1 hour', perHouse:'No restriction', rules:['800-1000 words, handwritten on provided sheets','Blue/black pen only, no reference material']},
+  {code:'PAF23', name:'Essay Writing (Sanskrit)', cat:'Literary', stage:'off', type:'individual', duration:'1 hour', perHouse:'No restriction', rules:['800-1000 words, handwritten on provided sheets','Blue/black pen only, no reference material']},
+  {code:'PAF24', name:'Poetry Writing (Malayalam)', cat:'Literary', stage:'off', type:'individual', duration:'1 hour', perHouse:'No restriction', rules:['Original composition, written during the event','12-30 lines, handwritten on provided sheets']},
+  {code:'PAF25', name:'Poetry Writing (English)', cat:'Literary', stage:'off', type:'individual', duration:'1 hour', perHouse:'No restriction', rules:['Original composition, written during the event','12-30 lines, handwritten on provided sheets']},
+  {code:'PAF26', name:'Poetry Writing (Hindi)', cat:'Literary', stage:'off', type:'individual', duration:'1 hour', perHouse:'No restriction', rules:['Original composition, written during the event','12-30 lines, handwritten on provided sheets']},
+  {code:'PAF27', name:'Poetry Writing (Sanskrit)', cat:'Literary', stage:'off', type:'individual', duration:'1 hour', perHouse:'No restriction', rules:['Original composition, written during the event','12-30 lines, handwritten on provided sheets']},
+  {code:'PAF28', name:'Short Story Writing (Malayalam)', cat:'Literary', stage:'off', type:'individual', duration:'1 hour', perHouse:'No restriction', rules:['Original fiction, 600-800 words','Handwritten, blue/black pen only']},
+  {code:'PAF29', name:'Short Story Writing (English)', cat:'Literary', stage:'off', type:'individual', duration:'1 hour', perHouse:'No restriction', rules:['Original fiction, 600-800 words','Handwritten, blue/black pen only']},
+  {code:'PAF30', name:'Short Story Writing (Hindi)', cat:'Literary', stage:'off', type:'individual', duration:'1 hour', perHouse:'No restriction', rules:['Original fiction, 600-800 words','Handwritten, blue/black pen only']},
+  {code:'PAF31', name:'Short Story Writing (Sanskrit)', cat:'Literary', stage:'off', type:'individual', duration:'1 hour', perHouse:'No restriction', rules:['Original fiction, 600-800 words','Handwritten, blue/black pen only']},
+  {code:'PAF32', name:'Recitation (Malayalam)', cat:'Literary', stage:'on', type:'individual', duration:'5 min', perHouse:'3 per house', rules:['Published literary work only, recited from memory','No reading, no prompting, avoid over-dramatizing']},
+  {code:'PAF33', name:'Recitation (English)', cat:'Literary', stage:'on', type:'individual', duration:'5 min', perHouse:'3 per house', rules:['Published literary work only, recited from memory','No reading, no prompting, avoid over-dramatizing']},
+  {code:'PAF34', name:'Recitation (Hindi)', cat:'Literary', stage:'on', type:'individual', duration:'5 min', perHouse:'3 per house', rules:['Published literary work only, recited from memory','No reading, no prompting, avoid over-dramatizing']},
+  {code:'PAF35', name:'Recitation (Sanskrit)', cat:'Literary', stage:'on', type:'individual', duration:'5 min', perHouse:'3 per house', rules:['Published literary work only, recited from memory','No reading, no prompting, avoid over-dramatizing']},
+  {code:'PAF36', name:'Geetha Chanting', cat:'Literary', stage:'on', type:'individual', duration:'5 min', perHouse:'3 per house', rules:['Any verse(s) from the Bhagavad Gita, chanted from memory','Original Sanskrit, correct pronunciation and rhythm','No dramatization or singing']},
+  {code:'PAF37', name:'Debate (English)', cat:'Literary', stage:'on', type:'group', duration:'10 min · team of 5', perHouse:'1 team per house', rules:['Topic announced 30 min in advance, stance decided by lot','5 min per speaker plus a 2-min rebuttal','No abusive language or personal attacks']},
+  {code:'PAF38', name:'Short Film', cat:'Film', stage:'off', type:'individual', duration:'Under 2 min', perHouse:'No restriction', rules:['Theme: The Rhythm of Sapta Swaras','Only the director registers; doesn\u2019t count toward your 5-event limit','Submit by 28 September, 5:00 PM · non-English/Malayalam films need English subtitles']},
+  {code:'PAF39', name:'Monoact', cat:'Theatre', stage:'on', type:'individual', duration:'5 min', perHouse:'2 per house', rules:['Solo dramatic performance, original or adapted','English, Malayalam or Hindi','No background music']},
+  {code:'PAF40', name:'Mimicry', cat:'Theatre', stage:'on', type:'individual', duration:'5 min', perHouse:'2 per house', rules:['Imitate voices of people, animals or objects','Present a variety of items','No background music, keep it decent']},
+  {code:'PAF41', name:'Mime', cat:'Theatre', stage:'on', type:'group', duration:'6 min · 3-6 members', perHouse:'2 teams per house', rules:['Gestures and expression only, no speech or lip movement','Light instrumental music allowed, no lyrics']},
+  {code:'PAF42', name:'Fancy Dress', cat:'Theatre', stage:'on', type:'individual', duration:'2-3 min', perHouse:'2 per house', rules:['Historical, cultural, social or mythological character','Your own voice only, no recordings or prompting','No fire, water or sharp props']},
+  {code:'PAF43', name:'Water Colouring', cat:'Fine Arts', stage:'off', type:'individual', duration:'2 hours', perHouse:'4 per house', rules:['Topic given at the venue, A3 sheet provided','Bring your own paints, brushes and palette']},
+  {code:'PAF44', name:'Pencil Drawing', cat:'Fine Arts', stage:'off', type:'individual', duration:'2 hours', perHouse:'4 per house', rules:['Topic announced at the venue','Bring your own pencils, erasers and sheets']},
+  {code:'PAF45', name:'Clay Modelling', cat:'Fine Arts', stage:'off', type:'individual', duration:'2 hours', perHouse:'4 per house', rules:['Topic given on the spot, clay provided','No external moulds, colours or decorations']},
+  {code:'PAF46', name:'Rangoli', cat:'Fine Arts', stage:'off', type:'group', duration:'2 hours · team of 2', perHouse:'1 team per house', rules:['1x1m space per participant, topic given on the spot','Bring your own coloured powder, flour or petals','No stencils or ready-made patterns']},
+  {code:'PAF47', name:'Photography', cat:'Fine Arts', stage:'off', type:'individual', duration:'7 hours (30 Sep, 10-4)', perHouse:'No restriction', rules:['Photos taken within campus during the allotted window','Mobile phones only, no DSLR','One JPEG submitted, no editing or watermarks']},
+  {code:'PAF48', name:'Collage', cat:'Fine Arts', stage:'off', type:'group', duration:'2 hours · team of 2', perHouse:'2 teams per house', rules:['Topic given on the spot, A3 base sheet provided','Newspaper/magazine cuttings, scissors and adhesive','No paint or decorative extras']},
+  {code:'PAF49', name:'Mehendi Design', cat:'Fine Arts', stage:'off', type:'group', duration:'2 hours · team of 2', perHouse:'2 teams per house', rules:['Bring your own model and natural mehendi cones','Theme given on the spot','Lower arms only, no stencils or glitter']},
+];
+
+const EVENTS_BY_CODE = Object.fromEntries(EVENTS.map(e => [e.code, e]));
+
+const HOUSES = [
+  {name:'SHADJAM', faculty:'Ms. Kripa Radhakrishnan (CSE)', phone:'8891697910', programmes:'BTech CSE — S1, S3, S5, S7'},
+  {name:'RISHABHAM', faculty:'Dr. Sreenu G (AIET)', phone:'9495264590', programmes:'BTech AIML — S1, S3, S5, S7 · BTech DS-CY — S3'},
+  {name:'GANDHARAM', faculty:'Dr. Josna James (ASM)', phone:'8281660300', programmes:'BTech DS/CY — S1, S5 · BSc AP · BSc/BA BEd · BA/MA Sanskrit'},
+  {name:'MADHYAMAM', faculty:'Dr. Sanjith S R (SBE)', phone:'9567917399', programmes:'BBA — S1, S3, S5 · BTech ECE — S1, S3, S5 · BSc CS — S5'},
+  {name:'PACHAMAM', faculty:'Dr. Nitha V R (CST)', phone:'8138085414', programmes:'BCA — S1, S3 · MBA — S1, S3'},
+  {name:'DHAIVATAM', faculty:'Ms. Sruthy S (SBE)', phone:'9446802678', programmes:'BCA — S5 · BCom — S5'},
+  {name:'NISHADAM', faculty:'Dr. Sarath P (PPSH)', phone:'9633015733', programmes:'BCom · BBA · BSc/MSc AP · MSc CP — PP campus'},
+];
+
+const PROGRAMMES = [
+  'BCom. - Warriam Road Campus','BCom. - LP Campus',
+  'B.Sc. Applied Psychology - Warriam Road Campus','B.Sc. Applied Psychology - LP Campus',
+  'BBA - Warriam Road Campus','BBA - LP Campus',
+  'BA BEd English','BA BEd Mathematics','BA Sanskrit','MA Sanskrit',
+  'B.Tech. CSE','B.Tech. AI/ML','B.Tech. Data Science','B.Tech. Cyber Security','B.Tech. ECE',
+  'B.Sc. Computer Science','Bachelor of Computer Application (BCA)',
+  'M.Sc. Applied Psychology','M.Sc. Clinical Psychology','Master of Business Administration (MBA)'
+];
+
+function suggestHouse(programme, batch, campus){
+  const b = (batch||'').toUpperCase();
+  const isS3 = b.includes('S3');
+  const isPP = (campus||'').startsWith('PP');
+  if(!programme) return '';
+  if(programme.includes('CSE')) return 'SHADJAM';
+  if(programme.includes('AI/ML')) return 'RISHABHAM';
+  if(programme.includes('Data Science') || programme.includes('Cyber Security')) return isS3 ? 'RISHABHAM' : 'GANDHARAM';
+  if(programme.includes('ECE')) return 'MADHYAMAM';
+  if(programme.startsWith('B.Sc. Computer Science')) return 'MADHYAMAM';
+  if(programme.startsWith('BBA')) return isPP ? 'NISHADAM' : 'MADHYAMAM';
+  if(programme.startsWith('BCom')) return b.includes('S5') ? 'DHAIVATAM' : (isPP ? 'NISHADAM' : 'DHAIVATAM');
+  if(programme.startsWith('Bachelor of Computer Application')) return b.includes('S5') ? 'DHAIVATAM' : 'PACHAMAM';
+  if(programme.startsWith('Master of Business')) return 'PACHAMAM';
+  if(programme.includes('Applied Psychology')) return isPP ? 'NISHADAM' : 'GANDHARAM';
+  if(programme.includes('Clinical Psychology')) return 'NISHADAM';
+  if(programme.startsWith('BA BEd') || programme.startsWith('BA Sanskrit') || programme.startsWith('MA Sanskrit')) return 'GANDHARAM';
+  return '';
+}
+
+/* Picker group definitions used in the registration form */
+const PICKER_GROUPS = {
+  poetry:   {codes:['PAF24','PAF25','PAF26','PAF27'], labelFrom:n=>n.match(/\((.+)\)/)[1], radio:true, allowNone:true},
+  story:    {codes:['PAF28','PAF29','PAF30','PAF31'], labelFrom:n=>n.match(/\((.+)\)/)[1], radio:true, allowNone:true},
+  essay:    {codes:['PAF20','PAF21','PAF22','PAF23'], labelFrom:n=>n.match(/\((.+)\)/)[1], radio:true, allowNone:true},
+  fineart:  {codes:['PAF43','PAF44','PAF45','PAF46','PAF48','PAF49','PAF47'], labelFrom:n=>n, radio:true, allowNone:true},
+  shortfilm:{codes:['PAF38'], labelFrom:()=>'Participating', radio:true, allowNone:true, noneLabel:'Not interested'},
+  elocution:{codes:['PAF16','PAF17','PAF18','PAF19'], labelFrom:n=>n.match(/\((.+)\)/)[1], radio:false},
+  recitation:{codes:['PAF32','PAF33','PAF34','PAF35'], labelFrom:n=>n.match(/\((.+)\)/)[1], radio:false},
+  geetha:   {codes:['PAF36'], labelFrom:()=>'Participating', radio:true, allowNone:true, noneLabel:'Not interested'},
+  individual:{codes:['PAF39','PAF40','PAF42','PAF01','PAF02','PAF03','PAF06','PAF07','PAF08','PAF09','PAF10','PAF11','PAF12','PAF13'], labelFrom:n=>n, radio:false},
+  groupevents:{codes:['PAF37','PAF41','PAF04','PAF05','PAF15','PAF14'], labelFrom:n=>n, radio:false},
+};
+
+/* ---------------- State ---------------- */
+const state = {
+  step: 1,
+  selections: { poetry:'', story:'', essay:'', fineart:'', shortfilm:'', geetha:'',
+                elocution:[], recitation:[], individual:[], groupevents:[] },
+  counts: {},
+  registrationOpen: true,
+  adminToken: null,
+  filters: { cat:'All', stage:'All', q:'' },
+};
+
+/* ---------------- Swara staff nodes (hero) ---------------- */
+(function drawStaff(){
+  const svgNS = "http://www.w3.org/2000/svg";
+  const g = document.getElementById('swaraNodes');
+  const names = ['Sa','Ri','Ga','Ma','Pa','Dha','Ni'];
+  const xs = [20,80,150,210,270,340,405];
+  const ys = [128,90,150,105,150,90,128];
+  names.forEach((n,i)=>{
+    const c = document.createElementNS(svgNS,'circle');
+    c.setAttribute('cx', xs[i]); c.setAttribute('cy', ys[i]); c.setAttribute('r', 6);
+    c.setAttribute('fill', i===0 ? '#E0B357' : '#C99A3C');
+    c.classList.add('swara-dot');
+    c.style.animation = `pulseDot 2.6s ease-in-out ${i*0.25}s infinite`;
+    g.appendChild(c);
+    const t = document.createElementNS(svgNS,'text');
+    t.setAttribute('x', xs[i]); t.setAttribute('y', ys[i]-14); t.setAttribute('text-anchor','middle');
+    t.setAttribute('class','swara-label'); t.textContent = n;
+    g.appendChild(t);
+  });
+  const style = document.createElement('style');
+  style.textContent = `@keyframes pulseDot{0%,100%{opacity:.65; transform:scale(1)} 50%{opacity:1; transform:scale(1.35)}}`;
+  document.head.appendChild(style);
+})();
+
+/* ---------------- Nav toggle ---------------- */
+document.getElementById('navToggle').addEventListener('click', ()=>{
+  const nl = document.getElementById('navLinks');
+  const open = nl.classList.toggle('open');
+  document.getElementById('navToggle').setAttribute('aria-expanded', open);
+});
+document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click', ()=>{
+  document.getElementById('navLinks').classList.remove('open');
+}));
+
+/* ---------------- Events explorer render ---------------- */
+const CATS = ['All', ...Array.from(new Set(EVENTS.map(e=>e.cat)))];
+function renderChips(){
+  const catWrap = document.getElementById('categoryChips');
+  catWrap.innerHTML = CATS.map(c => `<button class="chip ${c===state.filters.cat?'active':''}" data-cat="${c}">${c}</button>`).join('');
+  catWrap.querySelectorAll('.chip').forEach(btn=>btn.addEventListener('click', ()=>{
+    state.filters.cat = btn.dataset.cat; renderChips(); renderEventGrid();
+  }));
+  const stageWrap = document.getElementById('stageChips');
+  const stages = [['All','All stages'],['on','On-stage'],['off','Off-stage']];
+  stageWrap.innerHTML = stages.map(([v,l]) => `<button class="chip ${v===state.filters.stage?'active':''}" data-stage="${v}">${l}</button>`).join('');
+  stageWrap.querySelectorAll('.chip').forEach(btn=>btn.addEventListener('click', ()=>{
+    state.filters.stage = btn.dataset.stage; renderChips(); renderEventGrid();
+  }));
+}
+
+function eventCardHTML(ev){
+  const count = state.counts[ev.code];
+  const countLabel = (count === undefined || count === null) ? '&middot;&middot;&middot;' : count;
+  return `
+  <div class="event-card" data-code="${ev.code}">
+    <div class="row-top">
+      <span class="event-code">${ev.code}</span>
+      <span class="count-badge">${countLabel} registered</span>
+    </div>
+    <h3>${ev.name}</h3>
+    <div class="event-tags">
+      <span class="tag">${ev.cat}</span>
+      <span class="tag">${ev.stage === 'on' ? 'On-stage' : 'Off-stage'}</span>
+      <span class="tag">${ev.type === 'group' ? 'Group' : 'Individual'}</span>
+    </div>
+    <p class="meta-line">${ev.duration} &middot; ${ev.perHouse}</p>
+    <div class="rules"><ul>${ev.rules.map(r=>`<li>${r}</li>`).join('')}</ul></div>
+    <div class="expand-hint">Tap for full rules</div>
+  </div>`;
+}
+
+function renderEventGrid(){
+  const grid = document.getElementById('eventGrid');
+  const q = state.filters.q.trim().toLowerCase();
+  const list = EVENTS.filter(ev=>{
+    if(state.filters.cat !== 'All' && ev.cat !== state.filters.cat) return false;
+    if(state.filters.stage !== 'All' && ev.stage !== state.filters.stage) return false;
+    if(q && !(ev.name.toLowerCase().includes(q) || ev.code.toLowerCase().includes(q))) return false;
+    return true;
+  });
+  grid.innerHTML = list.map(eventCardHTML).join('');
+  document.getElementById('noResults').style.display = list.length ? 'none' : 'block';
+  grid.querySelectorAll('.event-card').forEach(card=>{
+    card.addEventListener('click', ()=> card.classList.toggle('open'));
+  });
+}
+document.getElementById('searchInput').addEventListener('input', (e)=>{
+  state.filters.q = e.target.value; renderEventGrid();
+});
+
+/* ---------------- Houses render ---------------- */
+function renderHouses(){
+  document.getElementById('houseGrid').innerHTML = HOUSES.map(h => `
+    <div class="event-card" style="cursor:default; background:#fff; border-color:var(--paper-line)">
+      <div class="row-top"><span class="event-code" style="color:var(--maroon)">HOUSE</span></div>
+      <h3 style="color:var(--ink-text)">${h.name}</h3>
+      <p class="meta-line" style="color:var(--muted-on-paper)">${h.programmes}</p>
+      <p class="meta-line" style="color:var(--muted-on-paper); margin-top:6px">Coordinator: ${h.faculty}</p>
+    </div>`).join('');
+}
+
+/* ---------------- Registration form: populate selects ---------------- */
+document.getElementById('programme').innerHTML =
+  '<option value="">Select</option>' + PROGRAMMES.map(p=>`<option value="${p}">${p}</option>`).join('');
+document.getElementById('house').innerHTML =
+  '<option value="">Select</option>' + HOUSES.map(h=>`<option value="${h.name}">${h.name}</option>`).join('');
+
+function buildPicker(groupKey, containerSelector){
+  const def = PICKER_GROUPS[groupKey];
+  const el = document.querySelector(`[data-group="${groupKey}"]`);
+  const inputType = def.radio ? 'radio' : 'checkbox';
+  let html = '';
+  if(def.allowNone){
+    html += `<label class="opt-card"><input type="${inputType}" name="${groupKey}" value=""> ${def.noneLabel || 'Not participating'}</label>`;
+  }
+  def.codes.forEach(code=>{
+    const ev = EVENTS_BY_CODE[code];
+    const label = def.labelFrom(ev.name);
+    html += `<label class="opt-card"><input type="${inputType}" name="${groupKey}" value="${code}"> ${label}</label>`;
+  });
+  el.innerHTML = html;
+  el.querySelectorAll('input').forEach(inp=>{
+    inp.addEventListener('change', ()=>{
+      el.querySelectorAll('.opt-card').forEach(c=>c.classList.remove('checked'));
+      el.querySelectorAll('input:checked').forEach(c=>c.closest('.opt-card').classList.add('checked'));
+      if(def.radio){
+        state.selections[groupKey] = inp.checked ? inp.value : '';
+      } else {
+        state.selections[groupKey] = Array.from(el.querySelectorAll('input:checked')).map(c=>c.value);
+      }
+      if(groupKey === 'groupevents'){
+        const has = state.selections.groupevents.length > 0;
+        document.getElementById('groupMembersBlock').classList.toggle('show', has);
+      }
+    });
+  });
+}
+['poetry','story','essay','fineart','shortfilm','geetha'].forEach(k=>buildPicker(k));
+['elocution','recitation','individual','groupevents'].forEach(k=>buildPicker(k));
+
+/* ---------------- House auto-suggest ---------------- */
+function updateHouseSuggestion(){
+  const programme = document.getElementById('programme').value;
+  const batch = document.getElementById('batch').value;
+  const campus = document.getElementById('campus').value;
+  const suggestion = suggestHouse(programme, batch, campus);
+  const sel = document.getElementById('house');
+  if(suggestion && !sel.dataset.userEdited){ sel.value = suggestion; }
+  const info = HOUSES.find(h=>h.name === sel.value);
+  document.getElementById('houseInfoCard').innerHTML = info ? `
+    <div class="event-card" style="cursor:default; background:#fff; border-color:var(--paper-line)">
+      <h3 style="color:var(--ink-text); font-size:17px">${info.name}</h3>
+      <p class="meta-line" style="color:var(--muted-on-paper)">${info.programmes}</p>
+      <p class="meta-line" style="color:var(--muted-on-paper); margin-top:4px">Coordinator: ${info.faculty} &middot; ${info.phone}</p>
+      <p class="hint" style="margin-top:10px">Auto-suggested from your programme and batch &mdash; change it above if it doesn't match.</p>
+    </div>` : '';
+}
+['programme','batch','campus'].forEach(id=>document.getElementById(id).addEventListener('change', updateHouseSuggestion));
+document.getElementById('house').addEventListener('change', (e)=>{ e.target.dataset.userEdited = '1'; updateHouseSuggestion(); });
+
+/* ---------------- Wizard navigation ---------------- */
+const STEP_LABELS = ['Details','House','Off-stage','On-stage','Review'];
+function renderProgress(){
+  const wrap = document.getElementById('regProgress');
+  wrap.innerHTML = STEP_LABELS.map((label,i)=>{
+    const n = i+1;
+    const cls = n < state.step ? 'done' : (n === state.step ? 'active' : '');
+    const dotContent = n < state.step ? '&#10003;' : n;
+    const connector = n < STEP_LABELS.length ? '<span class="connector"></span>' : '';
+    return `<span class="step ${cls}"><span class="dot">${dotContent}</span>${label}</span>${connector}`;
+  }).join('');
+}
+
+function showStep(n){
+  document.querySelectorAll('.reg-step').forEach(s=> s.style.display = (Number(s.dataset.step)===n ? '' : 'none'));
+  document.getElementById('btnBack').style.visibility = n === 1 ? 'hidden' : 'visible';
+  document.getElementById('btnNext').style.display = n === STEP_LABELS.length ? 'none' : '';
+  document.getElementById('btnSubmit').style.display = n === STEP_LABELS.length ? '' : 'none';
+  renderProgress();
+  if(n === STEP_LABELS.length) renderReview();
+  document.querySelector('.reg-shell').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function fieldEl(id){ return document.getElementById('f-' + id); }
+function markInvalid(id, invalid){ const el = fieldEl(id); if(el) el.classList.toggle('invalid', invalid); }
+
+function validateStep(n){
+  let ok = true;
+  if(n === 1){
+    const email = document.getElementById('email').value.trim().toLowerCase();
+    const emailOk = email.endsWith(COLLEGE_EMAIL_DOMAIN) && email.length > COLLEGE_EMAIL_DOMAIN.length;
+    markInvalid('email', !emailOk); if(!emailOk) ok = false;
+    const name = document.getElementById('fullName').value.trim();
+    markInvalid('name', !name); if(!name) ok = false;
+    const regNo = document.getElementById('regNo').value.trim();
+    markInvalid('regno', !regNo); if(!regNo) ok = false;
+    const gender = document.getElementById('gender').value;
+    markInvalid('gender', !gender); if(!gender) ok = false;
+    const wa = document.getElementById('whatsapp').value.trim();
+    const waOk = /^[0-9]{10}$/.test(wa);
+    markInvalid('whatsapp', !waOk); if(!waOk) ok = false;
+    const batch = document.getElementById('batch').value.trim();
+    markInvalid('batch', !batch); if(!batch) ok = false;
+    const programme = document.getElementById('programme').value;
+    markInvalid('programme', !programme); if(!programme) ok = false;
+    const campus = document.getElementById('campus').value;
+    markInvalid('campus', !campus); if(!campus) ok = false;
+  }
+  if(n === 2){
+    const house = document.getElementById('house').value;
+    markInvalid('house', !house); if(!house) ok = false;
+  }
+  if(n === 5){
+    const consent = document.getElementById('consentCheck').checked;
+    if(!consent) ok = false;
+    if(selectedEventCount() > 5) ok = false;
+  }
+  return ok;
+}
+
+function selectedList(){
+  const s = state.selections;
+  const list = [];
+  ['poetry','story','essay','fineart','geetha'].forEach(k=>{ if(s[k]) list.push(s[k]); });
+  if(s.shortfilm) list.push(s.shortfilm);
+  s.elocution.forEach(c=>list.push(c));
+  s.recitation.forEach(c=>list.push(c));
+  s.individual.forEach(c=>list.push(c));
+  s.groupevents.forEach(c=>list.push(c));
+  return list;
+}
+function selectedEventCount(){
+  // short film (PAF38) is excluded from the 5-event cap per the fest rules
+  return selectedList().filter(c => c !== 'PAF38').length;
+}
+
+function renderReview(){
+  const s = state.selections;
+  const details = [
+    ['Email', document.getElementById('email').value],
+    ['Name', document.getElementById('fullName').value],
+    ['Registration number', document.getElementById('regNo').value],
+    ['Gender', document.getElementById('gender').value],
+    ['WhatsApp', document.getElementById('whatsapp').value],
+    ['Batch', document.getElementById('batch').value],
+    ['Programme', document.getElementById('programme').value],
+    ['Campus', document.getElementById('campus').value],
+    ['House', document.getElementById('house').value],
+  ];
+  document.getElementById('reviewDetails').innerHTML = details.map(([k,v])=>
+    `<div style="display:flex; justify-content:space-between; gap:12px; border-bottom:1px solid var(--paper-line); padding:6px 0"><span style="color:var(--muted-on-paper)">${k}</span><strong>${v || '—'}</strong></div>`
+  ).join('');
+
+  const all = selectedList();
+  const names = all.map(c => EVENTS_BY_CODE[c] ? `${EVENTS_BY_CODE[c].code} — ${EVENTS_BY_CODE[c].name}` : c);
+  const cappedCount = selectedEventCount();
+  document.getElementById('selCount').textContent = cappedCount;
+  document.getElementById('selList').innerHTML = names.length ? names.map(n=>`<li>${n}</li>`).join('') : '<li>No events selected yet</li>';
+  document.getElementById('selSummary').classList.toggle('over', cappedCount > 5);
+}
+
+document.getElementById('btnNext').addEventListener('click', ()=>{
+  if(!validateStep(state.step)) return;
+  state.step = Math.min(state.step + 1, STEP_LABELS.length);
+  showStep(state.step);
+});
+document.getElementById('btnBack').addEventListener('click', ()=>{
+  state.step = Math.max(state.step - 1, 1);
+  showStep(state.step);
+});
+showStep(1);
+
+/* ---------------- Networking helper ----------------
+   Sent as text/plain to dodge the CORS preflight that Apps Script
+   web apps don't reliably answer; Code.gs reads it as a JSON string. */
+async function callApi(payload){
+  if(!APPS_SCRIPT_URL || APPS_SCRIPT_URL.indexOf('PASTE_YOUR') === 0){
+    throw new Error('The registration backend isn\u2019t connected yet. Ask the site owner to add the Apps Script URL.');
+  }
+  const res = await fetch(APPS_SCRIPT_URL, {
+    method: 'POST',
+    headers: {'Content-Type':'text/plain;charset=utf-8'},
+    body: JSON.stringify(payload)
+  });
+  if(!res.ok) throw new Error('Server error (' + res.status + ')');
+  const data = await res.json();
+  return data;
+}
+async function callApiGet(params){
+  if(!APPS_SCRIPT_URL || APPS_SCRIPT_URL.indexOf('PASTE_YOUR') === 0) return null;
+  const url = APPS_SCRIPT_URL + '?' + new URLSearchParams(params).toString();
+  const res = await fetch(url);
+  if(!res.ok) throw new Error('Server error (' + res.status + ')');
+  return res.json();
+}
+
+/* ---------------- Overlays ---------------- */
+function openOverlay(id){ document.getElementById(id).classList.add('show'); }
+function closeOverlay(id){ document.getElementById(id).classList.remove('show'); }
+document.getElementById('successClose').addEventListener('click', ()=>closeOverlay('successOverlay'));
+document.getElementById('errorClose').addEventListener('click', ()=>closeOverlay('errorOverlay'));
+[['successOverlay'],['errorOverlay'],['adminLoginOverlay'],['adminDashOverlay']].forEach(([id])=>{
+  document.getElementById(id).addEventListener('click', (e)=>{ if(e.target.id === id) closeOverlay(id); });
+});
+
+/* ---------------- Confetti (single orchestrated burst) ---------------- */
+function fireConfetti(){
+  const colors = ['#C99A3C','#E0B357','#9A4141','#3E7C6B','#F6EFE1'];
+  for(let i=0;i<46;i++){
+    const p = document.createElement('div');
+    p.className = 'confetti-piece';
+    const size = 6 + Math.random()*6;
+    p.style.width = size+'px'; p.style.height = (size*0.4)+'px';
+    p.style.left = Math.random()*100+'vw';
+    p.style.background = colors[Math.floor(Math.random()*colors.length)];
+    p.style.transform = `rotate(${Math.random()*360}deg)`;
+    document.body.appendChild(p);
+    const duration = 1800 + Math.random()*1400;
+    const drift = (Math.random()-0.5)*160;
+    p.animate([
+      {transform:`translate(0,0) rotate(0deg)`, opacity:1},
+      {transform:`translate(${drift}px, 100vh) rotate(${360+Math.random()*360}deg)`, opacity:0.9}
+    ], {duration, easing:'cubic-bezier(.2,.6,.4,1)'});
+    setTimeout(()=>p.remove(), duration+50);
+  }
+}
+
+/* ---------------- Submit registration ---------------- */
+document.getElementById('regForm').addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  if(!validateStep(5)){
+    if(!document.getElementById('consentCheck').checked){
+      document.getElementById('errorMsg').textContent = 'Please confirm the checkbox before submitting.';
+    } else {
+      document.getElementById('errorMsg').textContent = 'You\u2019ve selected more than five events. Please remove some and try again.';
+    }
+    openOverlay('errorOverlay');
+    return;
+  }
+  const s = state.selections;
+  if(s.groupevents.length > 0 && !document.getElementById('groupMembers').value.trim()){
+    state.step = 4; showStep(4);
+    document.getElementById('groupMembers').focus();
+    document.getElementById('errorMsg').textContent = 'Please list your group members before submitting.';
+    openOverlay('errorOverlay');
+    return;
+  }
+
+  const btn = document.getElementById('btnSubmit');
+  const originalLabel = btn.textContent;
+  btn.disabled = true; btn.innerHTML = '<span class="spin"></span> Submitting…';
+
+  const payload = {
+    action: 'register',
+    email: document.getElementById('email').value.trim().toLowerCase(),
+    fullName: document.getElementById('fullName').value.trim(),
+    regNo: document.getElementById('regNo').value.trim(),
+    gender: document.getElementById('gender').value,
+    whatsapp: document.getElementById('whatsapp').value.trim(),
+    batch: document.getElementById('batch').value.trim(),
+    programme: document.getElementById('programme').value,
+    campus: document.getElementById('campus').value,
+    house: document.getElementById('house').value,
+    poetry: s.poetry, story: s.story, essay: s.essay, fineart: s.fineart,
+    shortfilm: s.shortfilm, geetha: s.geetha,
+    elocution: s.elocution, recitation: s.recitation,
+    individual: s.individual, groupevents: s.groupevents,
+    groupMembers: document.getElementById('groupMembers').value.trim(),
+  };
+
+  try{
+    const data = await callApi(payload);
+    if(data && data.ok){
+      document.getElementById('successMsg').textContent =
+        `Thanks, ${payload.fullName.split(' ')[0]}. Your entry for ${selectedEventCount()} event(s) has been recorded under ${payload.house}.`;
+      openOverlay('successOverlay');
+      fireConfetti();
+      document.getElementById('regForm').reset();
+      Object.assign(state.selections, {poetry:'',story:'',essay:'',fineart:'',shortfilm:'',geetha:'',elocution:[],recitation:[],individual:[],groupevents:[]});
+      document.querySelectorAll('.opt-card').forEach(c=>c.classList.remove('checked'));
+      document.getElementById('groupMembersBlock').classList.remove('show');
+      state.step = 1; showStep(1);
+      refreshCounts();
+    } else {
+      throw new Error((data && data.error) || 'Registration failed. Please try again.');
+    }
+  } catch(err){
+    document.getElementById('errorMsg').textContent = err.message || 'Something went wrong. Please try again.';
+    openOverlay('errorOverlay');
+    refreshCounts();
+  } finally {
+    if(state.registrationOpen){ btn.disabled = false; btn.textContent = originalLabel; }
+  }
+});
+
+/* ---------------- Live counts ---------------- */
+async function refreshCounts(){
+  try{
+    const data = await callApiGet({action:'counts'});
+    if(!data) return;
+    state.counts = data.counts || {};
+    state.registrationOpen = data.registrationOpen !== false;
+    document.getElementById('tkTotal').textContent = (data.total ?? 0).toLocaleString();
+    renderEventGrid();
+    const submitBtn = document.getElementById('btnSubmit');
+    submitBtn.disabled = !state.registrationOpen;
+    submitBtn.textContent = state.registrationOpen ? 'Submit registration' : 'Registration is closed';
+  } catch(err){ /* fail quietly — counts are a nice-to-have */ }
+}
+refreshCounts();
+setInterval(refreshCounts, 45000);
+
+/* ---------------- Hidden admin entry ----------------
+   Click the small dot in the footer five times within three seconds. */
+(function(){
+  let clicks = 0, timer = null;
+  document.getElementById('adminTrigger').addEventListener('click', ()=>{
+    clicks++;
+    clearTimeout(timer);
+    timer = setTimeout(()=>{ clicks = 0; }, 3000);
+    if(clicks >= 5){
+      clicks = 0;
+      if(sessionStorage.getItem('pratibhaAdminToken')){
+        state.adminToken = sessionStorage.getItem('pratibhaAdminToken');
+        openAdminDash();
+      } else {
+        openOverlay('adminLoginOverlay');
+        document.getElementById('adminPass').focus();
+      }
+    }
+  });
+})();
+
+document.getElementById('adminLoginCancel').addEventListener('click', ()=>closeOverlay('adminLoginOverlay'));
+document.getElementById('adminLoginSubmit').addEventListener('click', submitAdminLogin);
+document.getElementById('adminPass').addEventListener('keydown', (e)=>{ if(e.key === 'Enter') submitAdminLogin(); });
+
+async function submitAdminLogin(){
+  const pass = document.getElementById('adminPass').value;
+  const btn = document.getElementById('adminLoginSubmit');
+  btn.disabled = true; const orig = btn.textContent; btn.innerHTML = '<span class="spin"></span>';
+  try{
+    const data = await callApi({action:'adminLogin', password: pass});
+    if(data && data.ok && data.token){
+      state.adminToken = data.token;
+      sessionStorage.setItem('pratibhaAdminToken', data.token);
+      fieldEl('adminpass').classList.remove('invalid');
+      closeOverlay('adminLoginOverlay');
+      document.getElementById('adminPass').value = '';
+      openAdminDash();
+    } else {
+      fieldEl('adminpass').classList.add('invalid');
+    }
+  } catch(err){
+    document.getElementById('errorMsg').textContent = err.message || 'Couldn\u2019t reach the sign-in service.';
+    openOverlay('errorOverlay');
+  } finally {
+    btn.disabled = false; btn.textContent = orig;
+  }
+}
+
+async function openAdminDash(){
+  openOverlay('adminDashOverlay');
+  await loadAdminData();
+}
+
+async function loadAdminData(){
+  const table = document.getElementById('adminTable');
+  table.querySelector('thead').innerHTML = '<tr><th>Loading…</th></tr>';
+  table.querySelector('tbody').innerHTML = '';
+  try{
+    const data = await callApiGet({action:'adminData', token: state.adminToken});
+    if(!data || !data.ok){
+      if(data && data.error === 'unauthorized'){
+        sessionStorage.removeItem('pratibhaAdminToken');
+        closeOverlay('adminDashOverlay');
+        openOverlay('adminLoginOverlay');
+        return;
+      }
+      throw new Error((data && data.error) || 'Could not load data.');
+    }
+    renderAdminStats(data);
+    renderAdminTable(data.rows || [], data.columns || []);
+    state._adminRows = data.rows || []; state._adminCols = data.columns || [];
+    const pill = document.getElementById('regStatusPill');
+    pill.className = 'status-pill ' + (data.registrationOpen ? 'open' : 'closed');
+    pill.textContent = data.registrationOpen ? 'Registration open' : 'Registration closed';
+  } catch(err){
+    table.querySelector('thead').innerHTML = '<tr><th>Couldn\u2019t load data</th></tr>';
+  }
+}
+
+function renderAdminStats(data){
+  const total = data.total || 0;
+  const byHouse = data.byHouse || {};
+  const stats = [`<div class="admin-stat"><div class="n">${total}</div><div class="l">total registrations</div></div>`];
+  HOUSES.forEach(h=>{
+    stats.push(`<div class="admin-stat"><div class="n">${byHouse[h.name]||0}</div><div class="l">${h.name}</div></div>`);
+  });
+  document.getElementById('adminStats').innerHTML = stats.join('');
+}
+
+function renderAdminTable(rows, columns){
+  const table = document.getElementById('adminTable');
+  if(!rows.length){
+    table.querySelector('thead').innerHTML = '<tr><th>No registrations yet</th></tr>';
+    table.querySelector('tbody').innerHTML = '';
+    return;
+  }
+  const cols = columns.length ? columns : Object.keys(rows[0]);
+  table.querySelector('thead').innerHTML = '<tr>' + cols.map(c=>`<th>${c}</th>`).join('') + '</tr>';
+  table.querySelector('tbody').innerHTML = rows.map(r =>
+    '<tr>' + cols.map(c => `<td>${(r[c] ?? '')}</td>`).join('') + '</tr>'
+  ).join('');
+}
+
+document.getElementById('refreshAdminBtn').addEventListener('click', loadAdminData);
+
+document.getElementById('toggleRegBtn').addEventListener('click', async ()=>{
+  const btn = document.getElementById('toggleRegBtn');
+  btn.disabled = true;
+  try{
+    const data = await callApi({action:'toggleRegistration', token: state.adminToken});
+    if(data && data.ok){ await loadAdminData(); }
+  } catch(err){ /* ignore */ }
+  finally{ btn.disabled = false; }
+});
+
+document.getElementById('exportCsvBtn').addEventListener('click', ()=>{
+  const rows = state._adminRows || []; const cols = state._adminCols || (rows[0] ? Object.keys(rows[0]) : []);
+  if(!rows.length) return;
+  const esc = v => `"${String(v ?? '').replace(/"/g,'""')}"`;
+  const csv = [cols.map(esc).join(',')].concat(rows.map(r => cols.map(c=>esc(r[c])).join(','))).join('\n');
+  const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'pratibha-registrations.csv'; a.click();
+  URL.revokeObjectURL(url);
+});
+
+document.getElementById('adminLogoutBtn').addEventListener('click', ()=>{
+  sessionStorage.removeItem('pratibhaAdminToken');
+  state.adminToken = null;
+  closeOverlay('adminDashOverlay');
+});
+
+/* ---------------- Init ---------------- */
+renderChips();
+renderEventGrid();
+renderHouses();
+updateHouseSuggestion();
+</script>
+</body>
+</html>
