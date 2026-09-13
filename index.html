@@ -264,6 +264,7 @@ section{padding:76px 0}
 
 /* ---------- Admin ---------- */
 .admin-trigger{opacity:.28; font-size:11px; cursor:default; user-select:none; letter-spacing:.03em}
+footer .fmeta{padding:10px 4px; margin:-10px -4px; cursor:default}
 .admin-login .field{margin-bottom:16px}
 .admin-dash{display:flex; flex-direction:column; gap:20px}
 .admin-topbar{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px}
@@ -626,7 +627,7 @@ footer .fmeta{font-size:12.5px; color:var(--muted-on-ink)}
 <footer>
   <div class="wrap">
     <div class="fmark">Pratibha 2026&ndash;27 &middot; CVV Arts Fest</div>
-    <div class="fmeta">Built for students, by students. Questions go to your class representative. <span class="admin-trigger" id="adminTrigger">&middot;</span></div>
+    <div class="fmeta" id="adminTrigger">Built for students, by students. Questions go to your class representative.</div>
   </div>
 </footer>
 
@@ -795,6 +796,38 @@ function suggestHouse(programme, batch, campus){
   if(programme.startsWith('BA BEd') || programme.startsWith('BA Sanskrit') || programme.startsWith('MA Sanskrit')) return 'GANDHARAM';
   return '';
 }
+
+/* Label text used by the *existing* live Google Form — new submissions
+   from this site are translated to match, so old and new rows stay
+   consistent in the same response sheet. Keep in sync with LABEL_TO_CODE
+   in Code.gs if either list changes. */
+const CODE_TO_LABEL = {
+  PAF24:'Poetry Writing - MALAYALAM', PAF25:'Poetry Writing - ENGLISH',
+  PAF26:'Poetry Writing - HINDI', PAF27:'Poetry Writing - SANSKRIT',
+  PAF28:'Short Story Writing - MALAYALAM', PAF29:'Short Story Writing - ENGLISH',
+  PAF30:'Short Story Writing - HINDI', PAF31:'Short Story Writing - SANSKRIT',
+  PAF20:'Essay Writing - MALAYALAM', PAF21:'Essay Writing - ENGLISH',
+  PAF22:'Essay Writing - HINDI', PAF23:'Essay Writing - SANSKRIT',
+  PAF43:'Water Colouring', PAF44:'Pencil Drawing', PAF45:'Clay Modelling',
+  PAF46:'Rangoli', PAF48:'Collage', PAF49:'Mehendi Designing', PAF47:'Photography',
+  PAF16:'Elocution - MALAYALAM', PAF17:'Elocution - ENGLISH',
+  PAF18:'Elocution - HINDI', PAF19:'Elocution - SANSKRIT',
+  PAF32:'Recitation - MALAYALAM', PAF33:'Recitation - ENGLISH',
+  PAF34:'Recitation - HINDI', PAF35:'Recitation - SANSKRIT',
+  PAF39:'Mono Act', PAF40:'Mimicry', PAF42:'Fancy dress',
+  PAF01:'Light Music Vocal Solo (Indian)', PAF02:'Classical Music Solo (Vocal)',
+  PAF03:'Western Music Solo (Vocal)', PAF06:'Stringed Instrument (Eastern)',
+  PAF07:'Stringed Instrument (Western)', PAF08:'Wind Instrument (Eastern)',
+  PAF09:'Wind Instrument (Western)', PAF10:'Percussion Instrument (Eastern)',
+  PAF11:'Percussion Instrument (Western)', PAF12:'Classical Dance Solo',
+  PAF13:'Western Dance Solo',
+  PAF37:'Debate ( English )', PAF41:'Mime', PAF04:'Group song ( Indian )',
+  PAF05:'Group song ( Western )',
+  PAF15:'Group Dance ( Classical/Semi-Classical/Western/Contemporary )',
+  PAF14:'Group Dance ( Folk )',
+};
+function labelFor(code){ return CODE_TO_LABEL[code] || ''; }
+function labelsFor(codes){ return (codes||[]).map(labelFor).filter(Boolean).join(', '); }
 
 /* Picker group definitions used in the registration form */
 const PICKER_GROUPS = {
@@ -1184,10 +1217,12 @@ document.getElementById('regForm').addEventListener('submit', async (e)=>{
     programme: document.getElementById('programme').value,
     campus: document.getElementById('campus').value,
     house: document.getElementById('house').value,
-    poetry: s.poetry, story: s.story, essay: s.essay, fineart: s.fineart,
-    shortfilm: s.shortfilm, geetha: s.geetha,
-    elocution: s.elocution, recitation: s.recitation,
-    individual: s.individual, groupevents: s.groupevents,
+    poetry: labelFor(s.poetry), story: labelFor(s.story),
+    essay: labelFor(s.essay), fineart: labelFor(s.fineart),
+    shortfilm: s.shortfilm ? 'Participating' : 'Not Interested',
+    geetha: s.geetha ? 'Participating' : 'Not Interested',
+    elocution: labelsFor(s.elocution), recitation: labelsFor(s.recitation),
+    individual: labelsFor(s.individual), groupevents: labelsFor(s.groupevents),
     groupMembers: document.getElementById('groupMembers').value.trim(),
   };
 
@@ -1234,22 +1269,36 @@ refreshCounts();
 setInterval(refreshCounts, 45000);
 
 /* ---------------- Hidden admin entry ----------------
-   Click the small dot in the footer five times within three seconds. */
+   Two ways in, neither advertised on the page:
+   1. Keyboard shortcut Ctrl+Shift+A (Cmd+Shift+A on Mac) — works from
+      anywhere on the page, no scrolling or precise clicking needed.
+   2. Ten taps on the footer credit line within six seconds — for
+      when you're on a phone. The whole line is the tap target (not a
+      tiny dot), so it's forgiving about exactly where you tap. */
+function openAdminEntry(){
+  if(sessionStorage.getItem('pratibhaAdminToken')){
+    state.adminToken = sessionStorage.getItem('pratibhaAdminToken');
+    openAdminDash();
+  } else {
+    openOverlay('adminLoginOverlay');
+    document.getElementById('adminPass').focus();
+  }
+}
+document.addEventListener('keydown', (e)=>{
+  const combo = (e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'a';
+  if(!combo) return;
+  e.preventDefault();
+  openAdminEntry();
+});
 (function(){
   let clicks = 0, timer = null;
   document.getElementById('adminTrigger').addEventListener('click', ()=>{
     clicks++;
     clearTimeout(timer);
-    timer = setTimeout(()=>{ clicks = 0; }, 3000);
-    if(clicks >= 5){
+    timer = setTimeout(()=>{ clicks = 0; }, 6000);
+    if(clicks >= 10){
       clicks = 0;
-      if(sessionStorage.getItem('pratibhaAdminToken')){
-        state.adminToken = sessionStorage.getItem('pratibhaAdminToken');
-        openAdminDash();
-      } else {
-        openOverlay('adminLoginOverlay');
-        document.getElementById('adminPass').focus();
-      }
+      openAdminEntry();
     }
   });
 })();
